@@ -61,7 +61,7 @@ def game(console,chosen_word):
     fullWordlePattern = []
     allWordsGuessed = []
     while not endOfGame:
-        guess=Prompt.ask(guessStatement)
+        guess = Prompt.ask(guessStatement).upper()
         while len(guess)!=5 or guess in alreadyGuessed or guess not in word_list:
             if guess in alreadyGuessed:
                 console.print("[red]You've already guessed this word!\n[/]")
