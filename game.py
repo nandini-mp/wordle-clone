@@ -69,7 +69,7 @@ def game(console,chosen_word):
                 console.print("[red]Not a valid word. Try again!\n[/]")
             else:
                 console.print("[red]Please enter a 5-letter word!\n[/]")
-            guess=Prompt.ask(guessStatement)
+            guess = Prompt.ask(guessStatement).upper()
         alreadyGuessed.append(guess)
         guessed, pattern = check_guess(guess,chosen_word)
         allWordsGuessed.append(guessed)
